@@ -14,7 +14,11 @@ function ToolLogoCardSkeleton() {
 
 export default function Loading() {
   return (
-    <section id="resources" aria-label="Loading tools" className="py-12 md:py-14">
+    <section
+      id="resources"
+      aria-label="Loading tools"
+      className="py-12 md:py-14"
+    >
       <Wrapper className="relative">
         <div className="text-center">
           <Skeleton className="mx-auto h-10 w-70 max-w-full rounded-full" />

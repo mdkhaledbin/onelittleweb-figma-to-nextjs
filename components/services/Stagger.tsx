@@ -14,12 +14,12 @@ export function Stagger({ children, className }: StaggerProps) {
       className={className}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.08 }}
       variants={{
         hidden: {},
         show: {
           transition: {
-            staggerChildren: 0.1,
+            staggerChildren: 0.04,
           },
         },
       }}
@@ -34,11 +34,11 @@ export function StaggerItem({ children, className }: StaggerProps) {
     <motion.div
       className={className}
       variants={{
-        hidden: { opacity: 0, y: 40 },
+        hidden: { opacity: 0.5, y: 12 },
         show: {
           opacity: 1,
           y: 0,
-          transition: { duration: 0.4, ease: "easeOut" },
+          transition: { duration: 0.2, ease: "easeOut" },
         },
       }}
     >

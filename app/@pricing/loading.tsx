@@ -4,7 +4,11 @@ function Skeleton({ className }: { className: string }) {
   return <div className={`animate-pulse bg-brand-light/60 ${className}`} />;
 }
 
-function PricingCardSkeleton({ highlighted = false }: { highlighted?: boolean }) {
+function PricingCardSkeleton({
+  highlighted = false,
+}: {
+  highlighted?: boolean;
+}) {
   return (
     <article
       className={`flex h-full flex-col rounded-xl px-5 py-7 ${
@@ -54,7 +58,11 @@ function PricingCardSkeleton({ highlighted = false }: { highlighted?: boolean })
 
 export default function Loading() {
   return (
-    <section id="pricing" aria-label="Loading pricing" className="bg-white py-2">
+    <section
+      id="pricing"
+      aria-label="Loading pricing"
+      className="bg-white py-2"
+    >
       <Wrapper>
         <div className="text-center">
           <Skeleton className="mx-auto h-12 w-100 max-w-full rounded-full" />
