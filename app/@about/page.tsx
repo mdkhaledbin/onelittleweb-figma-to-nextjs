@@ -1,7 +1,7 @@
 import Image from "next/image";
-import addFriend from "@/public/getting_start/addFriend.png"
-import connect from "@/public/getting_start/group.png"
-import meet from "@/public/getting_start/headPhone.png"
+import addFriend from "@/public/about/addFriend.png"
+import connect from "@/public/about/group.png"
+import meet from "@/public/about/headPhone.png"
 import { Reveal } from "@/components/services/Reveal";
 import { Stagger, StaggerItem } from "@/components/services/Stagger";
 import Reasons from "@/components/about/Reasons";

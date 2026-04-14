@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Save from "./Save";
-import PricingCard from "./PricingCard";
+import Save from "@/components/pricing/Save";
+import PricingCard from "@/components/pricing/PricingCard";
 import { PRICING_PLANS, PricingPlan } from "@/lib/constants";
 
 export default function PricingClientWrapper() {

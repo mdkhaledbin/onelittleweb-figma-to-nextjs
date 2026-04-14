@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import HotelPhoto from "@/public/reasons/HotelPhoto.png"
+import HotelPhoto from "@/public/about/reasons/HotelPhoto.png"
 import StarIcon from "@/components/about/reasons/StarIcon";
 
 const HotelCard = () => {

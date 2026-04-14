@@ -35,8 +35,6 @@ export default function RootLayout({
   tools,
   about,
   review,
-  faq,
-  cta,
   footer
 }: Readonly<{
   children: React.ReactNode;
@@ -46,8 +44,6 @@ export default function RootLayout({
   tools: React.ReactNode;
   about: React.ReactNode;
   review: React.ReactNode;
-  faq: React.ReactNode,
-  cta: React.ReactNode,
   footer: React.ReactNode,
 }>) {
   return (
@@ -63,10 +59,8 @@ export default function RootLayout({
         {tools}
         {about}
         {review}
-        {faq}
-        {cta}
-        {footer}
         {children}
+        {footer}
       </body>
     </html>
   );

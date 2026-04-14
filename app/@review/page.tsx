@@ -3,26 +3,25 @@ import { TESTIMONIALS } from "@/lib/constants";
 import Wrapper from "@/components/common/Wrapper";
 import { Reveal } from "@/components/services/Reveal";
 import StarIcon from "@/components/about/reasons/StarIcon";
+import Faq from "@/components/review/FAQ";
+import Cta from "@/components/review/CTA";
 
 export default function Review() {
   return (
-    <section
-      id="blog"
-      aria-label="Testimonials"
-      className="bg-white py-12 md:py-14 mb-10"
-    >
-      <Wrapper>
-        <Reveal>
-          <h2 className="text-center font-bold text-[#191d23] text-[32px] leading-[42px] md:text-[42px]">
-            Check Our Clients Review
-          </h2>
-          <p className="mx-auto mt-4 max-w-[713px] text-center font-medium text-[#1e1e1e] text-[14px] leading-[1.28]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        </Reveal>
+    <section id="blog">
+      <div aria-label="Testimonials" className="bg-white py-12 md:py-14 mb-10">
+        <Wrapper>
+          <Reveal>
+            <h2 className="text-center font-bold text-[#191d23] text-[32px] leading-[42px] md:text-[42px]">
+              Check Our Clients Review
+            </h2>
+            <p className="mx-auto mt-4 max-w-[713px] text-center font-medium text-[#1e1e1e] text-[14px] leading-[1.28]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </Reveal>
         </Wrapper>
         <div className="mt-8 flex gap-5 md:gap-10 overflow-x-auto pb-8 snap-x snap-mandatory no-scrollbar">
           {TESTIMONIALS.map((item, index) => (
@@ -50,7 +49,9 @@ export default function Review() {
             </article>
           ))}
         </div>
-      
+      </div>
+      <Faq />
+      <Cta />
     </section>
   );
 }

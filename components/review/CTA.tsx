@@ -1,9 +1,9 @@
 import { CTA } from "@/lib/constants";
 import Button from "@/components/common/Button";
 import Wrapper from "@/components/common/Wrapper";
-import Avatar1 from "@/public/faq/Avatar1.png";
-import Avatar2 from "@/public/faq/Avatar2.png";
-import Avatar3 from "@/public/faq/Avatar3.png";
+import Avatar1 from "@/public/review/faq/Avatar1.png";
+import Avatar2 from "@/public/review/faq/Avatar2.png";
+import Avatar3 from "@/public/review/faq/Avatar3.png";
 import Image from "next/image";
 
 export default function Cta() {
