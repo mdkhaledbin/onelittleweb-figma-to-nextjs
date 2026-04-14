@@ -5,6 +5,14 @@ import QueryIcon from "@/components/services/icons/QueryIcon";
 import ListingIcon from "@/components/services/icons/ListingIcon";
 import ReviewsIcon from "@/components/services/icons/ReviewsIcon";
 import ExpenseIcon from "@/components/services/icons/ExpenseIcon";
+import HostfullyIcon from '@/components/tools/icons/HostfullyIcon';
+import Image from 'next/image';
+
+import Beyound from "@/public/tools/Beyound.png"
+import Guesty from "@/public/tools/Guesty.png"
+import Lodgify from "@/public/tools/Lodgify.png"
+import PriceLab from "@/public/tools/PriceLab.png"
+import WheelHouse from "@/public/tools/WheelHouse.png"
 
 export interface NavLink {
   label: string;
@@ -114,15 +122,15 @@ export const SERVICES: ServiceItem[] = [
 ];
 
 export const TOOL_LOGOS = [
-  "Hostaway",
-  "Guesty",
-  "Hospitable",
-  "OwnerRez",
-  "Lodgify",
-  "Smoobu",
-  "Booking",
-  "Airbnb",
-  "Vrbo",
+  <Image src={PriceLab} className="object-contain" alt={'PriceLab'} />,
+  <Image src={WheelHouse} className="object-contain" alt={'WheelHouse'} />,
+  <Image src={Beyound} className="object-contain" alt={'Beyound Pricing'} />,
+  <HostfullyIcon />,
+<Image src={Guesty} className="object-contain" alt={"Guesty"} />,
+<Image src={Lodgify} className="object-contain" alt={"Lodgify"} />,
+  <HostfullyIcon />,
+<Image src={Guesty} className="object-contain" alt={"Guesty"} />,
+<Image src={Lodgify} className="object-contain" alt={"Lodgify"} />,
 ];
 
 export const PRICING_PLANS: PricingPlan[] = [
