@@ -29,8 +29,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  hero,
 }: Readonly<{
   children: React.ReactNode;
+  hero: React.ReactNode;
 }>) {
   return (
     <html
@@ -39,9 +41,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        <div className="pt-20">
-          {children}
-        </div>
+        {hero}
+        {children}
       </body>
     </html>
   );
