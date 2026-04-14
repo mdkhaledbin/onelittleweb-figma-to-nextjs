@@ -18,7 +18,7 @@ export default function Clients() {
         </div>
       </Wrapper>
 
-      <div className="w-full bg-[#F6F6F6] py-10 md:py-14">
+      <div className="w-full bg-[#F6F6F6] py-7 md:py-12">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
           <div className="flex flex-wrap items-center justify-center lg:justify-between gap-x-10 gap-y-8 md:gap-x-14 lg:gap-x-5">
             <AirBnbIcon />

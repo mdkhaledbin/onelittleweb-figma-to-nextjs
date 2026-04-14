@@ -1,9 +1,18 @@
+import React from 'react';
+import BookingsIcon from "@/components/services/icons/BookingsIcon";
+import CleaningIcon from "@/components/services/icons/CleaningIcon";
+import QueryIcon from "@/components/services/icons/QueryIcon";
+import ListingIcon from "@/components/services/icons/ListingIcon";
+import ReviewsIcon from "@/components/services/icons/ReviewsIcon";
+import ExpenseIcon from "@/components/services/icons/ExpenseIcon";
+
 export interface NavLink {
   label: string;
   href: string;
 }
 
 export interface ServiceItem {
+  icon: React.ReactNode;
   title: string;
   description: string;
 }
@@ -67,31 +76,37 @@ export const CLIENT_LOGOS: PartnerLogo[] = [
 
 export const SERVICES: ServiceItem[] = [
   {
+    icon: <ListingIcon />,  
     title: "Manage Property Listings",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
+    icon: <BookingsIcon />,  
     title: "Manage Customer Bookings",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
+    icon: <CleaningIcon />,  
     title: "Schedule House Cleaning",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
+    icon: <ReviewsIcon />,  
     title: "Monitor Guest Reviews",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
+    icon: <ExpenseIcon />,  
     title: "Track & Report Expenses",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
+    icon: <QueryIcon />,  
     title: "Guest Inquiry & Support",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

@@ -31,10 +31,12 @@ export default function RootLayout({
   children,
   hero,
   client,
+  services,
 }: Readonly<{
   children: React.ReactNode;
   hero: React.ReactNode;
   client: React.ReactNode;
+  services: React.ReactNode;
 }>) {
   return (
     <html
@@ -45,6 +47,7 @@ export default function RootLayout({
         <Navbar />
         {hero}
         {client}
+        {services}
         {children}
       </body>
     </html>
