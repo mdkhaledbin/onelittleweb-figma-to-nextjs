@@ -10,10 +10,11 @@ import { ArrowRightIcon } from "@/components/icon/ArrowRightIcon";
 import { MenuIcon } from "@/components/icon/MenuIcon";
 import { XIcon } from "@/components/icon/XIcon";
 import { clsx } from "clsx";
+import { useActiveHref } from "@/components/hooks/useActiveHref";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const activeHref = "#home";
+  const activeHref = useActiveHref();
 
   // Prevent scroll when mobile menu is open
   useEffect(() => {
