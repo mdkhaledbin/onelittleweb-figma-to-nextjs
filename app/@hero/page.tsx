@@ -8,6 +8,9 @@ import Bphoto from "@/public/hero/Bphoto.png"
 import Glass from "@/public/hero/Glass.png"
 import Vphoto from "@/public/hero/Vphoto.svg"
 import Link from "next/link";
+import BookingIcon from "@/components/hero/BookingIcon";
+import TripAdvisorIcon from "@/components/hero/TripAdvisorIcon";
+import VrboIcon from "@/components/hero/VrboIcon";
 
 
 const VERTICAL_GUIDES = [
@@ -82,7 +85,7 @@ export default function Hero() {
     <section
       id="home"
       aria-label="Hero"
-      className="relative mb-10 flex flex-col overflow-hidden pb-12 sm:pb-16 lg:h-188 lg:pb-0"
+      className="relative mb-8 flex flex-col overflow-hidden pb-12 sm:pb-16 lg:h-188 lg:pb-0"
     >
       <div className="pointer-events-none absolute inset-0 text-[1px]" 
           >
@@ -178,34 +181,37 @@ const FourImages = () => {
         />
       </div>
       <div className="pointer-events-none absolute right-[calc(19%)] top-[calc(20%)] hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rotate-10deg overflow-hidden rounded-lg md:block lg:left-[calc(64%+226px)] lg:top-[calc(43%-106px)] lg:h-24 lg:w-24">
-        <Image
+        {/* <Image
           src={Bphoto}
           alt="Bphoto"
           width={48}
           height={48}
           className="h-full w-full object-cover"
           aria-hidden="true"
-        />
+        /> */}
+        <BookingIcon />
       </div>
       <div className="pointer-events-none absolute right-[calc(20%)] bottom-[calc(10%)] hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rotate-18 overflow-hidden rounded-lg md:block lg:left-[calc(64%+226px)] lg:top-[calc(62%+106px)] lg:h-24 lg:w-24">
-        <Image
+        {/* <Image
           src={Glass}
           alt="Glass"
           width={48}
           height={48}
           className="h-full w-full object-cover"
           aria-hidden="true"
-        />
+        /> */}
+        <TripAdvisorIcon />
       </div>
       <div className="pointer-events-none absolute left-[calc(21%)] bottom-[calc(15%)] hidden h-12 w-12 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-lg md:block lg:left-[calc(35%-226px)] lg:top-[calc(62%+106px)] lg:h-18 lg:w-18">
-        <Image
+        {/* <Image
           src={Vphoto}  
           alt="Vphoto"
           width={48}
           height={48}
           className="h-full w-full object-cover"
           aria-hidden="true"
-        />
+        /> */}
+        <VrboIcon/>
       </div>
         </>
     )
