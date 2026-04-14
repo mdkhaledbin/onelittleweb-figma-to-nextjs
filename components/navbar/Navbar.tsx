@@ -30,7 +30,7 @@ const Navbar = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="sticky top-0 z-50 h-[89px] border-b border-[#f3d7e0] bg-white shadow-[0_4px_62px_0_rgba(250,196,210,0.63)]">
+    <header className="sticky top-0 z-50 h-22.25 border-b border-[#f3d7e0] bg-white shadow-[0_4px_62px_0_rgba(250,196,210,0.63)]">
       <Wrapper className="h-full">
         <div className="flex h-full items-center justify-between gap-4">
           <Link
@@ -42,7 +42,7 @@ const Navbar = () => {
               alt="Airbnb Assistant Logo"
               width={125}
               height={45}
-              className="w-[100px] md:w-[125px] h-auto"
+              className="w-25 md:w-31.25 h-auto"
               priority
             />
           </Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 key={link.label}
                 href={link.href}
                 className={clsx(
-                  "relative text-[18px] leading-normal transition-all duration-300 group hover:-translate-y-0.5",
+                  "relative text-lg leading-normal transition-all duration-300 group hover:-translate-y-0.5",
                   activeHref === link.href
                     ? "font-bold text-[#ED3C6A]"
                     : "font-normal text-[#1e1e1e]",
@@ -63,7 +63,7 @@ const Navbar = () => {
                 {link.label}
                 <span
                   className={clsx(
-                    "absolute -bottom-1 left-0 h-[2px] bg-[#ED3C6A] transition-all duration-300",
+                    "absolute -bottom-1 left-0 h-0.5 bg-[#ED3C6A] transition-all duration-300",
                     activeHref === link.href ? "w-full hover:scale-110" : "w-0",
                   )}
                 />
@@ -101,7 +101,7 @@ const Navbar = () => {
         )}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8 p-6">
-          <div className="flex flex-col items-center gap-6 w-full max-w-[280px]">
+          <div className="flex flex-col items-center gap-6 w-full max-w-70">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.label}
@@ -119,7 +119,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="mt-4 w-full max-w-[280px]">
+          <div className="mt-4 w-full max-w-70">
             <Button
               size="lg"
               className="w-full gap-2 text-lg justify-center h-14"

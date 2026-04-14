@@ -5,7 +5,7 @@ import { FacebookIcon } from "@/components/footer/FacebookIcon";
 import { GithubIcon } from "@/components/footer/GitHubIcon";
 import { InstagramIcon } from "@/components/footer/InstagramIcon";
 import { TwitterIcon } from "@/components/footer/TwitterIcon";
-import GoogleIcon from "@/public/navbar/logo.png"
+import GoogleIcon from "@/public/navbar/logo.png";
 import Wrapper from "@/components/common/Wrapper";
 
 export default function Footer() {
@@ -14,13 +14,8 @@ export default function Footer() {
       <div className="border-t border-[#d6d6d6] bg-white py-10 md:py-16">
         <Wrapper className="flex flex-col gap-12 lg:flex-row lg:justify-between items-start">
           <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
-            <Image
-              src={GoogleIcon}
-              alt="Google logo"
-              width={106}
-              height={38}
-            />
-            <p className="mt-6 max-w-[396px] text-[14px] leading-[1.55] text-[#52525b]">
+            <Image src={GoogleIcon} alt="Google logo" width={106} height={38} />
+            <p className="mt-6 max-w-99 text-sm leading-[1.55] text-[#52525b]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               dictum aliquet accumsan porta lectus ridiculus in mattis. Netus
               sodales in volutpat ullamcorper amet adipiscing fermentum.
@@ -29,28 +24,28 @@ export default function Footer() {
               <Link
                 href="#"
                 aria-label="Twitter"
-                className="hover:text-[#ed3c6a]"
+                className="hover:text-brand"
               >
                 <TwitterIcon />
               </Link>
               <Link
                 href="#"
                 aria-label="Facebook"
-                className="hover:text-[#ed3c6a]"
+                className="hover:text-brand"
               >
                 <FacebookIcon />
               </Link>
               <Link
                 href="#"
                 aria-label="Instagram"
-                className="hover:text-[#ed3c6a]"
+                className="hover:text-brand"
               >
                 <InstagramIcon />
               </Link>
               <Link
                 href="#"
                 aria-label="GitHub"
-                className="hover:text-[#ed3c6a]"
+                className="hover:text-brand"
               >
                 <GithubIcon />
               </Link>
@@ -59,16 +54,19 @@ export default function Footer() {
 
           <div className="flex flex-col gap-12 sm:flex-row sm:gap-20 md:gap-24 lg:gap-36 xl:gap-50 items-center mx-auto text-center lg:justify-end">
             {FOOTER_COLUMNS.map((column) => (
-              <div key={column.title} className="flex flex-col items-center text-center justify-end sm:items-start sm:text-left">
-                <h3 className="font-bold mb-6 text-[16px] leading-6 text-[#18181b]">
+              <div
+                key={column.title}
+                className="flex flex-col items-center text-center justify-end sm:items-start sm:text-left"
+              >
+                <h3 className="font-bold mb-6 text-base leading-6 text-[#18181b]">
                   {column.title}
                 </h3>
-                <ul className="flex flex-col items-center gap-y-3 lg:mt-0 items-center sm:items-start mx-auto w-40">
+                <ul className="flex flex-col items-center gap-y-3 lg:mt-0 sm:items-start mx-auto w-40">
                   {column.links.map((item) => (
                     <li key={item}>
                       <Link
                         href="#"
-                        className="text-[14px] font-medium pt-5 leading-5 text-[#18181b] hover:text-[#ed3c6a]"
+                        className="text-sm font-medium pt-5 leading-5 text-[#18181b] hover:text-brand"
                       >
                         {item}
                       </Link>
@@ -81,8 +79,8 @@ export default function Footer() {
         </Wrapper>
       </div>
 
-      <div className="bg-[#230b41] py-[18px]">
-        <p className="text-center font-[family-name:var(--font-poppins)] text-[14px] leading-[22px] text-white">
+      <div className="bg-[#230b41] py-4.5">
+        <p className="text-center font-poppins text-sm leading-5.5 text-white">
           © Copyright 2024, All Rights Reserved by XYz
         </p>
       </div>

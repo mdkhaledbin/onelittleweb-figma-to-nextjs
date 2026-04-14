@@ -22,9 +22,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     const sizes = {
-      sm: "h-11 px-5 text-[14px]",
-      md: "h-11 px-6 text-[16px]",
-      lg: "h-[50px] px-6 text-[14px]",
+      sm: "h-11 px-5 text-sm",
+      md: "h-11 px-6 text-base",
+      lg: "h-[50px] px-6 text-sm",
     };
 
     return (
@@ -41,4 +41,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
 Button.displayName = "Button";
 
-export default Button ;
+export default Button;

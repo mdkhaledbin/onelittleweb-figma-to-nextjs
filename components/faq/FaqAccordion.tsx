@@ -9,7 +9,7 @@ export function FaqAccordion() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <div className="mx-auto mt-10 max-w-[768px]">
+    <div className="mx-auto mt-10 max-w-3xl">
       {FAQ_ITEMS.map((item, index) => {
         const isOpen = openIndex === index;
 
@@ -25,16 +25,16 @@ export function FaqAccordion() {
               onClick={() => setOpenIndex(isOpen ? -1 : index)}
             >
               <span
-                className={`font-bold text-black ${index > 3 ? "text-[17px] leading-[26px]" : "text-[16px] leading-6"}`}
+                className={`font-bold text-black ${index > 3 ? "text-lg leading-6.5" : "text-base leading-6"}`}
               >
                 {item.question}
               </span>
-              <span className="mt-[2px] text-[#ed3c6a]">
+              <span className="mt-0.5 text-brand">
                 {isOpen ? <MinusCircleIcon /> : <PlusCircleIcon />}
               </span>
             </button>
             {isOpen ? (
-              <p className="mt-2 max-w-[720px] text-[14px] leading-6 text-[#606060]">
+              <p className="mt-2 max-w-180 text-sm leading-6 text-[#606060]">
                 {item.answer}
               </p>
             ) : null}

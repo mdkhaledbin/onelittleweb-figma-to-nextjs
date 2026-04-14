@@ -11,18 +11,19 @@ export default function Faq() {
     >
       <Wrapper>
         <Reveal>
-        <div className="rounded-[16px] bg-[#f9fafb] px-4 py-10 sm:px-8 md:px-10">
-          <div className="mx-auto max-w-[768px] text-center">
-            <h2 className="font-semibold text-[#101828] text-[34px] leading-[44px] tracking-[-0.72px] md:text-[36px]">
-              Frequently asked <span className="text-[#ed3c6a]">questions</span>
-            </h2>
-            <p className="mt-3 font-normal text-black text-[16px] leading-[24px]">
-              Everything you need to know about the product and billing.
-            </p>
-          </div>
+          <div className="rounded-2xl bg-[#f9fafb] px-4 py-10 sm:px-8 md:px-10">
+            <div className="mx-auto max-w-3xl text-center">
+              <h2 className="font-semibold text-[#101828] text-4xl leading-11 tracking-[-0.72px] md:text-4xl">
+                Frequently asked{" "}
+                <span className="text-brand">questions</span>
+              </h2>
+              <p className="mt-3 font-normal text-black text-base leading-6">
+                Everything you need to know about the product and billing.
+              </p>
+            </div>
 
-          <FaqAccordion />
-        </div>
+            <FaqAccordion />
+          </div>
         </Reveal>
       </Wrapper>
     </section>

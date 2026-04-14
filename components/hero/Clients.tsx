@@ -12,7 +12,7 @@ export default function Clients() {
     <section className="mt-1">
       <Wrapper>
         <div className="pb-6 text-center mb-3 md:mb-5">
-          <h2 className="font-semibold text-heading text-[20px] leading-[1.2] md:text-[24px]">
+          <h2 className="font-semibold text-heading text-xl leading-[1.2] md:text-2xl">
             Trusted by leaders in 50+ industries
           </h2>
         </div>
