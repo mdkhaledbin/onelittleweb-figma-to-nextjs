@@ -32,11 +32,13 @@ export default function RootLayout({
   hero,
   client,
   services,
+  pricing,
 }: Readonly<{
   children: React.ReactNode;
   hero: React.ReactNode;
   client: React.ReactNode;
   services: React.ReactNode;
+  pricing: React.ReactNode;
 }>) {
   return (
     <html
@@ -48,6 +50,7 @@ export default function RootLayout({
         {hero}
         {client}
         {services}
+        {pricing}
         {children}
       </body>
     </html>
