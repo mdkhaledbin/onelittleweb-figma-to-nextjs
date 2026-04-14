@@ -8,9 +8,6 @@ import Bphoto from "@/public/hero/Bphoto.png"
 import Glass from "@/public/hero/Glass.png"
 import Vphoto from "@/public/hero/Vphoto.svg"
 import Link from "next/link";
-import BookingIcon from "@/components/hero/BookingIcon";
-import TripAdvisorIcon from "@/components/hero/TripAdvisorIcon";
-import VrboIcon from "@/components/hero/VrboIcon";
 
 
 const VERTICAL_GUIDES = [
@@ -113,14 +110,14 @@ export default function Hero() {
             {HERO.description}
           </p>
 
-          <div className="mt-12 flex flex-col items-center justify-center gap-2.5 sm:mt-10 sm:flex-row lg:mt-8 lg:flex-col">
+          <div className="mt-12 flex flex-col items-center justify-center gap-2.5 sm:mt-10 lg:mt-8">
             <Button className="w-full gap-2 sm:w-auto" size="md">
               {HERO.primaryCta}
               <ArrowRightIcon className="text-white" />
             </Button>
             <Link
               href="#pricing"
-              className="mt-5 text-[14px] font-semibold text-[#1e1e1e] underline hover:text-brand sm:mt-0 lg:mt-3"
+              className="mt-5 text-[14px] block font-semibold text-[#1e1e1e] underline hover:text-brand lg:mt-3"
             >
               {HERO.secondaryCta}
             </Link>
@@ -170,7 +167,7 @@ const Dots = () => {
 const FourImages = () => {
     return (
         <>
-        <div className="pointer-events-none absolute left-[calc(18%)] top-[calc(16%)] hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rotate-[-9deg] overflow-hidden rounded-lg md:block lg:left-[calc(35%-226px)] lg:top-[calc(43%-106px)] lg:h-24 lg:w-24">
+        <div className="pointer-events-none absolute left-[calc(15%)] lg:left-[calc(18%)] top-[calc(20%)] lg:top-[calc(16%)] hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rotate-[-9deg] overflow-hidden rounded-lg md:block lg:left-[calc(35%-226px)] lg:top-[calc(43%-106px)] lg:h-24 lg:w-24">
         <Image
           src={AirBnb}
           alt="AirBnb"
@@ -180,38 +177,35 @@ const FourImages = () => {
           aria-hidden="true"
         />
       </div>
-      <div className="pointer-events-none absolute right-[calc(19%)] top-[calc(20%)] hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rotate-10deg overflow-hidden rounded-lg md:block lg:left-[calc(64%+226px)] lg:top-[calc(43%-106px)] lg:h-24 lg:w-24">
-        {/* <Image
+      <div className="pointer-events-none absolute right-[calc(9%)] lg:right-[calc(19%)] top-[calc(20%)] hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rotate-10deg overflow-hidden rounded-lg md:block lg:left-[calc(64%+226px)] lg:top-[calc(43%-106px)] lg:h-24 lg:w-24">
+        <Image
           src={Bphoto}
           alt="Bphoto"
           width={48}
           height={48}
           className="h-full w-full object-cover"
           aria-hidden="true"
-        /> */}
-        <BookingIcon />
+        />
       </div>
-      <div className="pointer-events-none absolute right-[calc(20%)] bottom-[calc(10%)] hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rotate-18 overflow-hidden rounded-lg md:block lg:left-[calc(64%+226px)] lg:top-[calc(62%+106px)] lg:h-24 lg:w-24">
-        {/* <Image
+      <div className="pointer-events-none absolute right-[calc(14%)] lg:right-[calc(20%)] bottom-[calc(10%)] hidden h-16 w-16 -translate-x-1/2 -translate-y-1/2 rotate-18 overflow-hidden rounded-lg md:block lg:left-[calc(64%+226px)] lg:top-[calc(62%+106px)] lg:h-24 lg:w-24">
+        <Image
           src={Glass}
           alt="Glass"
           width={48}
           height={48}
           className="h-full w-full object-cover"
           aria-hidden="true"
-        /> */}
-        <TripAdvisorIcon />
+        />
       </div>
       <div className="pointer-events-none absolute left-[calc(21%)] bottom-[calc(15%)] hidden h-12 w-12 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-lg md:block lg:left-[calc(35%-226px)] lg:top-[calc(62%+106px)] lg:h-18 lg:w-18">
-        {/* <Image
+        <Image
           src={Vphoto}  
           alt="Vphoto"
           width={48}
           height={48}
           className="h-full w-full object-cover"
           aria-hidden="true"
-        /> */}
-        <VrboIcon/>
+        />
       </div>
         </>
     )

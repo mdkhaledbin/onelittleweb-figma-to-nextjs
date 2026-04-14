@@ -13,7 +13,7 @@ const Navbar = () => {
         <Wrapper className='h-full'>
           <div className="flex h-full items-center justify-between gap-4">
             <Link href="/" className='transition-transform duration-300 hover:scale-105 active:scale-95'>
-                <Image src={logo} alt="Airbnb Assistant Logo" width={100} height={100} />
+                <Image src={logo} alt="Airbnb Assistant Logo" width={125} height={45} style={{ height: 'auto' }} priority />
             </Link>
             <div className='hidden items-center gap-6.25 lg:flex mx-auto justify-between'>
               {

@@ -1,4 +1,3 @@
-import { CLIENT_LOGOS } from "@/lib/constants";
 import Wrapper from "@/components/common/Wrapper";
 import AirBnbIcon from "@/components/client/AirBnbIcon";
 import GoHomeIcon from "@/components/client/GoHomeIcon";
@@ -19,16 +18,9 @@ export default function Clients() {
         </div>
       </Wrapper>
 
-      <div className="w-full mx-auto bg-faq-bg bg-[#F6F6F6] py-5 md:py-6">
-          <div className="flex flex-wrap mx-20 items-center justify-between gap-x-3 gap-y-3 md:gap-x-5 lg:flex-nowrap lg:justify-between">
-            {/* {CLIENT_LOGOS.map((logo) => (
-              <div
-                key={logo.label}
-                className={`font-semibold text-[20px] leading-none md:text-[24px] ${logo.accentClass}`}
-              >
-                {logo.label}
-              </div>
-            ))} */}
+      <div className="w-full bg-[#F6F6F6] py-10 md:py-14">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
+          <div className="flex flex-wrap items-center justify-center lg:justify-between gap-x-10 gap-y-8 md:gap-x-14 lg:gap-x-5">
             <AirBnbIcon />
             <BookingComIcon />
             <VrboIcon />
@@ -37,6 +29,7 @@ export default function Clients() {
             <ExpediaIcon />
             <GoHomeIcon />
           </div>
+        </div>
       </div>
     </section>
   );
