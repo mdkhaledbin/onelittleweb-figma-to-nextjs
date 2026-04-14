@@ -9,7 +9,7 @@ export default function Services() {
     <section
       id="services"
       aria-label="Our services"
-      className="bg-white py-12 md:py-14"
+      className="bg-white py-12 md:py-14 h-full"
     >
       <Wrapper>
         <Reveal>
@@ -27,14 +27,14 @@ export default function Services() {
         <Stagger className="mt-8 grid gap-4 md:grid-cols-2 lg:mt-10 lg:grid-cols-3">
           {SERVICES.map((service, index) => (
             <StaggerItem key={service.title}>
-              <article className="flex mt-3 min-h-[320px] flex-col rounded-[10px] border border-[#fac4d2] bg-white p-6 transition-all duration-300 hover:scale-[1.02] sm:p-8 md:pl-10">
+              <article className="flex mt-3 min-h-[320px] flex-col rounded-[10px] border border-[#fac4d2] hover:bg-white-900 p-6 transition-all duration-300 hover:scale-[1.02] sm:p-8 md:pl-10">
                 <div className="mt-4 inline-flex h-16 w-16 items-center justify-center text-[#ed3c6a] text-lg font-bold">
                   {service.icon}
                 </div>
-                <h3 className="mt-6 text-[24px] font-bold leading-[1.1] text-[#191d23] md:max-w-[80%]">
+                <h3 className="mt-6 text-[24px] font-bold leading-[1.1] text-[#191d23] md:max-w-[65%]">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-[14px] font-semibold leading-[1.35] text-[#1e1e1e] md:max-w-[90%]">
+                <p className="mt-3 text-[14px] font-medium leading-[1.1] text-[#1e1e1e] md:max-w-[75%]">
                   {service.description}
                 </p>
                 <div className="mt-auto pt-8">
