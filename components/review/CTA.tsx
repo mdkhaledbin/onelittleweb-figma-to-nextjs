@@ -5,11 +5,13 @@ import Avatar1 from "@/public/review/faq/Avatar1.png";
 import Avatar2 from "@/public/review/faq/Avatar2.png";
 import Avatar3 from "@/public/review/faq/Avatar3.png";
 import Image from "next/image";
+import { Reveal } from "../services/Reveal";
 
 export default function Cta() {
   return (
     <section aria-label="Support call to action" className="py-10">
       <Wrapper>
+        <Reveal>
         <div className="mx-auto flex flex-col items-center rounded-[16px] bg-[#f9fafb] px-6 py-7 text-center sm:px-10">
           <div className="mb-5 flex items-center">
             <div className="relative h-14 w-[120px]">
@@ -34,6 +36,7 @@ export default function Cta() {
             {CTA.button}
           </Button>
         </div>
+        </Reveal>
       </Wrapper>
     </section>
   );

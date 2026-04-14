@@ -1,5 +1,6 @@
 import { FaqAccordion } from "@/components/faq/FaqAccordion";
 import Wrapper from "@/components/common/Wrapper";
+import { Reveal } from "../services/Reveal";
 
 export default function Faq() {
   return (
@@ -9,6 +10,7 @@ export default function Faq() {
       className="py-12 md:py-14"
     >
       <Wrapper>
+        <Reveal>
         <div className="rounded-[16px] bg-[#f9fafb] px-4 py-10 sm:px-8 md:px-10">
           <div className="mx-auto max-w-[768px] text-center">
             <h2 className="font-semibold text-[#101828] text-[34px] leading-[44px] tracking-[-0.72px] md:text-[36px]">
@@ -21,6 +23,7 @@ export default function Faq() {
 
           <FaqAccordion />
         </div>
+        </Reveal>
       </Wrapper>
     </section>
   );

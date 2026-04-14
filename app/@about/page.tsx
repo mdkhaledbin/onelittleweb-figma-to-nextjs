@@ -16,7 +16,7 @@ export default function GettingStarted() {
         <Reveal>
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-3xl font-bold">
-            Getting Started is <span className="text-[#ed3c6a]">Easy</span>
+            Getting Started is <span className="text-brand">Easy</span>
           </h2>
           <p className="text-sm font-medium max-w-2xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
