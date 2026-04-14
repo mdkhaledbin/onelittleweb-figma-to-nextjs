@@ -9,7 +9,7 @@ const Wrapper = ({
   className?: string;
 }) => {
   return (
-    <div className={twMerge("max-w-12/14 mx-auto px-4 py-4", className)}>
+    <div className={twMerge("max-w-12/14 mx-auto px-4 py-4 overflow-hidden", className)}>
       {children}
     </div>
   );
