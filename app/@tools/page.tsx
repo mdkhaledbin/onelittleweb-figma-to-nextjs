@@ -26,7 +26,7 @@ export default function Tools() {
           <Stagger className="grid w-full gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {TOOL_LOGOS.map((logo, index) => (
               <StaggerItem key={index}>
-                <div className="flex h-24 py-14 md:py-18 items-center justify-center rounded-lg bg-white px-6 md:px-15 text-center font-bold text-heading text-xl leading-tight md:text-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(237,60,106,0.4)] cursor-pointer">
+                <div className="flex w-full h-full md:py-18 items-center justify-center rounded-lg bg-white px-6 md:px-15 text-center font-bold text-heading text-xl leading-tight md:text-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(237,60,106,0.4)] cursor-pointer">
                   {logo}
                 </div>
               </StaggerItem>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Manrope, Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import Footer from "./@footer/page";
 
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
@@ -35,7 +36,6 @@ export default function RootLayout({
   tools,
   about,
   review,
-  footer
 }: Readonly<{
   children: React.ReactNode;
   hero: React.ReactNode;
@@ -44,7 +44,6 @@ export default function RootLayout({
   tools: React.ReactNode;
   about: React.ReactNode;
   review: React.ReactNode;
-  footer: React.ReactNode,
 }>) {
   return (
     <html
@@ -60,7 +59,7 @@ export default function RootLayout({
         {about}
         {review}
         {children}
-        {footer}
+        <Footer />
       </body>
     </html>
   );
