@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Manrope, Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
-import Footer from "./@footer/page";
+import Footer from "@/components/footer/Footer";
 
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });

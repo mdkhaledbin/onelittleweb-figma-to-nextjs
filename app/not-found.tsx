@@ -22,18 +22,18 @@ export default function NotFound() {
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link
+            <a
               href="/"
               className="inline-flex h-11 items-center justify-center rounded-lg bg-brand px-6 text-sm font-bold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-[#d73760]"
             >
               Back to Home
-            </Link>
-            <Link
-              href="/#pricing"
+            </a>
+            <a
+              href="/"
               className="inline-flex h-11 items-center justify-center rounded-lg border border-brand px-6 text-sm font-bold text-brand transition-all duration-300 hover:scale-[1.02] hover:bg-[#fff4f7]"
             >
               View Pricing
-            </Link>
+            </a>
           </div>
         </section>
       </div>
