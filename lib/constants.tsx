@@ -14,6 +14,11 @@ import Lodgify from "@/public/tools/Lodgify.png"
 import PriceLab from "@/public/tools/PriceLab.png"
 import WheelHouse from "@/public/tools/WheelHouse.png"
 
+import TestimonialAvatar1 from "@/public/review/Ellipse 21 (1).png"
+import TestimonialAvatar2 from "@/public/review/Ellipse 21 (2).png"
+import TestimonialAvatar3 from "@/public/review/Ellipse 21 (4).png"
+
+
 export interface NavLink {
   label: string;
   href: string;
@@ -42,7 +47,7 @@ export interface PricingPlan {
 export interface Testimonial {
   name: string;
   text: string;
-  avatar: string;
+  avatar: React.ReactNode;
 }
 
 export interface FaqItem {
@@ -205,17 +210,27 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     name: "Jenny Wilson",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    avatar: "/images/testimonial-avatar.svg",
+    avatar: <Image src={TestimonialAvatar1} width={200} height={200} alt="Testimonial Avatar" />,
   },
   {
     name: "Esther Howard",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    avatar: "/images/testimonial-avatar.svg",
+    avatar: <Image src={TestimonialAvatar2} width={200} height={200} alt="Testimonial Avatar" />,
   },
   {
     name: "Robert Fox",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    avatar: "/images/testimonial-avatar.svg",
+    avatar: <Image src={TestimonialAvatar3} width={200} height={200} alt="Testimonial Avatar" />,
+  },
+  {
+    name: "Robert Fox",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    avatar: <Image src={TestimonialAvatar3} width={200} height={200} alt="Testimonial Avatar" />,
+  },
+  {
+    name: "Robert Fox",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    avatar: <Image src={TestimonialAvatar3} width={200} height={200} alt="Testimonial Avatar" />,
   },
 ];
 
