@@ -34,6 +34,8 @@ export default function RootLayout({
   services,
   pricing,
   tools,
+  getting_start,
+  reasons,
 }: Readonly<{
   children: React.ReactNode;
   hero: React.ReactNode;
@@ -41,6 +43,8 @@ export default function RootLayout({
   services: React.ReactNode;
   pricing: React.ReactNode;
   tools: React.ReactNode;
+  getting_start: React.ReactNode;
+  reasons: React.ReactNode;
 }>) {
   return (
     <html
@@ -54,6 +58,8 @@ export default function RootLayout({
         {services}
         {pricing}
         {tools}
+        {getting_start}
+        {reasons}
         {children}
       </body>
     </html>
