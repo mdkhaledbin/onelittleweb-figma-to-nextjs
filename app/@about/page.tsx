@@ -2,13 +2,18 @@ import Image from "next/image";
 import addFriend from "@/public/getting_start/addFriend.png"
 import connect from "@/public/getting_start/group.png"
 import meet from "@/public/getting_start/headPhone.png"
+import { Reveal } from "@/components/services/Reveal";
+import { Stagger, StaggerItem } from "@/components/services/Stagger";
+import Reasons from "@/components/about/Reasons";
 
 export default function GettingStarted() {
   return (
-    <section className="self-stretch flex justify-center px-5 pb-24 text-center text-black font-['DM_Sans']">
+    <section id="about">
+    <div className="self-stretch flex justify-center px-5 pb-24 text-center text-black font-['DM_Sans']">
       <div className="w-full max-w-6xl flex flex-col gap-16">
 
         {/* Heading */}
+        <Reveal>
         <div className="flex flex-col items-center gap-4">
           <h2 className="text-3xl font-bold">
             Getting Started is <span className="text-[#ed3c6a]">Easy</span>
@@ -18,28 +23,39 @@ export default function GettingStarted() {
             incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
+        </Reveal>
 
         {/* Steps */}
+        <Stagger>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-left mx-auto">
+          <StaggerItem className="transition-all duration-300 hover:scale-102 hover:-translate-y-1">
           <StepCard
             step="01"
             icon={<Image src={addFriend} alt="Step 1" width={100} height={100} className="w-20 h-auto" />}
             label="Add requirements & sign up today"
           />
+          </StaggerItem>
 
+          <StaggerItem className="transition-all duration-300 hover:scale-102 hover:-translate-y-1">
           <StepCard
             step="02"
-            icon={<Image src={connect} alt="Step 2" width={100} height={100} className="w-28 h-auto" />}
+            icon={<Image src={connect} alt="Step 2" width={100} height={100} className="w-20 h-auto" />}
             label="Connect with your CSM & onboarding team"
           />
+          </StaggerItem>
 
+          <StaggerItem className="transition-all duration-300 hover:scale-102 hover:-translate-y-1">
           <StepCard
             step="03"
             icon={<Image src={meet} alt="Step 3" width={100} height={100} className="w-20 h-auto" />}
             label="Meet your STR Assistant next week"
           />
+          </StaggerItem>
         </div>
+        </Stagger>
       </div>
+    </div>
+    <Reasons />
     </section>
   );
 }

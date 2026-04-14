@@ -2,7 +2,7 @@ import Image from "next/image";
 import { TESTIMONIALS } from "@/lib/constants";
 import Wrapper from "@/components/common/Wrapper";
 import { Reveal } from "@/components/services/Reveal";
-import StarIcon from "@/components/reasons/StarIcon";
+import StarIcon from "@/components/about/reasons/StarIcon";
 
 export default function Review() {
   return (

@@ -33,8 +33,7 @@ export default function RootLayout({
   services,
   pricing,
   tools,
-  getting_start,
-  reasons,
+  about,
   review,
   faq,
   cta,
@@ -45,8 +44,7 @@ export default function RootLayout({
   services: React.ReactNode;
   pricing: React.ReactNode;
   tools: React.ReactNode;
-  getting_start: React.ReactNode;
-  reasons: React.ReactNode;
+  about: React.ReactNode;
   review: React.ReactNode;
   faq: React.ReactNode,
   cta: React.ReactNode,
@@ -63,8 +61,7 @@ export default function RootLayout({
         {services}
         {pricing}
         {tools}
-        {getting_start}
-        {reasons}
+        {about}
         {review}
         {faq}
         {cta}

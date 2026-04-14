@@ -13,7 +13,7 @@ export default function Tools() {
   <Wrapper className="relative">
     <Reveal>
       <h2 className="text-center font-bold text-heading text-[32px] leading-10.5 md:text-[42px]">
-        Our Tools
+        Our <span className="text-[#ed3c6a]">Tools</span>
       </h2>
       <p className="mx-auto mt-4 max-w-184.5 text-center font-medium text-[#1e1e1e] text-[14px] leading-[1.28]">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

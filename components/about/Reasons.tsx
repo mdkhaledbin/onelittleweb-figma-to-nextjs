@@ -4,8 +4,9 @@ import Image from "next/image";
 import GroupPhoto from "@/public/reasons/GroupPhoto.png"
 import CalendarPhoto from "@/public/reasons/CalendarPhoto.png"
 import smilingMaleOfficeWorker from "@/public/reasons/smilingMaleOfficeWorker.png"
-import LeftBar from "@/components/reasons/LeftBar";
-import HotelCard from "@/components/reasons/HotelCard";
+import LeftBar from "@/components/about/reasons/LeftBar";
+import HotelCard from "@/components/about/reasons/HotelCard";
+import { Reveal } from "../services/Reveal";
 
 export default function Reasons() {
     return (
@@ -14,6 +15,7 @@ export default function Reasons() {
   aria-label="Why Choose Us"
   className="py-12 md:py-14"
 >
+  <Reveal>
   <Wrapper>
     <div className="self-stretch rounded-[33px] bg-[#fdebf0] border border-[#f8becd] box-border flex flex-col lg:flex-row items-center lg:items-start justify-center pt-10 pb-16 px-6 md:pt-16 md:pb-[81px] md:pl-[88px] md:pr-[37px] gap-12 lg:gap-3.5 max-w-full overflow-hidden">
 
@@ -163,6 +165,7 @@ export default function Reasons() {
 
     </div>
   </Wrapper>
+    </Reveal>
     </section>
     );
 }
