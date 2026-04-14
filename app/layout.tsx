@@ -37,6 +37,7 @@ export default function RootLayout({
   getting_start,
   reasons,
   review,
+  faq,
 }: Readonly<{
   children: React.ReactNode;
   hero: React.ReactNode;
@@ -47,6 +48,7 @@ export default function RootLayout({
   getting_start: React.ReactNode;
   reasons: React.ReactNode;
   review: React.ReactNode;
+  faq: React.ReactNode
 }>) {
   return (
     <html
@@ -63,6 +65,7 @@ export default function RootLayout({
         {getting_start}
         {reasons}
         {review}
+        {faq}
         {children}
       </body>
     </html>

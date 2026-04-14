@@ -9,7 +9,7 @@ export default function Review() {
     <section
       id="blog"
       aria-label="Testimonials"
-      className="bg-white py-12 md:py-14"
+      className="bg-white py-12 md:py-14 mb-10"
     >
       <Wrapper>
         <Reveal>
