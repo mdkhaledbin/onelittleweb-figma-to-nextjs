@@ -11,16 +11,16 @@ export default function Clients() {
   return (
     <section aria-label="Partners" className="mt-1">
       <Wrapper>
-        <div className="pb-6 text-center mb-8 md:mb-10">
+        <div className="pb-6 text-center mb-3 md:mb-5">
           <h2 className="font-semibold text-heading text-[20px] leading-[1.2] md:text-[24px]">
             Trusted by leaders in 50+ industries
           </h2>
         </div>
       </Wrapper>
 
-      <div className="w-full bg-[#F6F6F6] py-7 md:py-12">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
-          <div className="flex flex-wrap items-center justify-center lg:justify-between gap-x-10 gap-y-8 md:gap-x-14 lg:gap-x-5">
+      <div className="w-full bg-[#F6F6F6] py-5 md:py-8">
+        <div className="mx-auto px-6 md:px-12 lg:px-20">
+          <div className="flex flex-wrap items-center justify-between gap-x-10 gap-y-8 md:gap-x-14 lg:gap-x-5">
             <AirBnbIcon />
             <BookingComIcon />
             <VrboIcon />

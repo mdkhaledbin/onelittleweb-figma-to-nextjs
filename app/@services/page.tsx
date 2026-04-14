@@ -27,7 +27,7 @@ export default function Services() {
         <Stagger className="mt-8 grid gap-4 md:grid-cols-2 lg:mt-10 lg:grid-cols-3">
           {SERVICES.map((service, index) => (
             <StaggerItem key={service.title}>
-              <article className="flex min-h-[320px] flex-col rounded-[10px] border border-[#fac4d2] bg-white p-6 transition-all duration-300 hover:scale-[1.02] sm:p-8 md:pl-10">
+              <article className="flex mt-3 min-h-[320px] flex-col rounded-[10px] border border-[#fac4d2] bg-white p-6 transition-all duration-300 hover:scale-[1.02] sm:p-8 md:pl-10">
                 <div className="mt-4 inline-flex h-16 w-16 items-center justify-center text-[#ed3c6a] text-lg font-bold">
                   {service.icon}
                 </div>
