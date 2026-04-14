@@ -30,7 +30,6 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
   hero,
-  client,
   services,
   pricing,
   tools,
@@ -43,7 +42,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
   hero: React.ReactNode;
-  client: React.ReactNode;
   services: React.ReactNode;
   pricing: React.ReactNode;
   tools: React.ReactNode;
@@ -62,7 +60,6 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navbar />
         {hero}
-        {client}
         {services}
         {pricing}
         {tools}

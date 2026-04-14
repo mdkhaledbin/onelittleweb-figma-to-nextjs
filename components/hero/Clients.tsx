@@ -1,15 +1,15 @@
 import Wrapper from "@/components/common/Wrapper";
-import AirBnbIcon from "@/components/client/AirBnbIcon";
-import GoHomeIcon from "@/components/client/GoHomeIcon";
-import VrboIcon from "@/components/client/VrboIcon";
-import BookingComIcon from "@/components/client/BookingIcon";
-import ExpediaIcon from "@/components/client/ExpediaIcon";
-import TripAdvisorIcon from "@/components/client/TripAdvisorIcon";
-import AgodaIcon from "@/components/client/AgodaIcon";
+import AirBnbIcon from "@/components/hero/client/AirBnbIcon";
+import GoHomeIcon from "@/components/hero/client/GoHomeIcon";
+import VrboIcon from "@/components/hero/client/VrboIcon";
+import BookingComIcon from "@/components/hero/client/BookingIcon";
+import ExpediaIcon from "@/components/hero/client/ExpediaIcon";
+import TripAdvisorIcon from "@/components/hero/client/TripAdvisorIcon";
+import AgodaIcon from "@/components/hero/client/AgodaIcon";
 
 export default function Clients() {
   return (
-    <section aria-label="Partners" className="mt-1">
+    <section className="mt-1">
       <Wrapper>
         <div className="pb-6 text-center mb-3 md:mb-5">
           <h2 className="font-semibold text-heading text-[20px] leading-[1.2] md:text-[24px]">

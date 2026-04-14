@@ -8,6 +8,7 @@ import Bphoto from "@/public/hero/Bphoto.png"
 import Glass from "@/public/hero/Glass.png"
 import Vphoto from "@/public/hero/Vphoto.svg"
 import Link from "next/link";
+import Clients from "@/components/hero/Clients";
 
 
 const VERTICAL_GUIDES = [
@@ -82,8 +83,9 @@ export default function Hero() {
     <section
       id="home"
       aria-label="Hero"
-      className="relative mb-8 flex flex-col overflow-hidden pb-12 sm:pb-16 lg:h-188 lg:pb-0"
     >
+      <div className="relative mb-8 flex flex-col overflow-hidden pb-12 sm:pb-16 lg:h-165 lg:pb-0">
+
       <div className="pointer-events-none absolute inset-0 text-[1px]" 
           >
         <GuideLines
@@ -124,6 +126,8 @@ export default function Hero() {
           </div>
         </div>
       </Wrapper>
+      </div>
+      <Clients />
     </section>
   );
 }
