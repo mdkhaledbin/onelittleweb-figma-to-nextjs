@@ -86,7 +86,10 @@ function LoadingCard() {
 
 export default function Loading() {
   return (
-    <section aria-label="Loading page content" className="relative overflow-hidden">
+    <section
+      aria-label="Loading page content"
+      className="relative overflow-hidden"
+    >
       <div className="pointer-events-none absolute inset-0 text-[1px]">
         <GuideLines
           verticalClassName="bg-black/10"
