@@ -45,7 +45,7 @@ export default function PricingDetailModal() {
           <p className="text-gray-500 mb-8 text-base leading-relaxed">
             Sorry, the pricing plan doesn't exist.
           </p>
-          <Button text="Close" onClick={handleClose} />
+          <Button onClick={handleClose}>Close</Button>
         </div>
       </Modal>
     );
@@ -134,10 +134,9 @@ export default function PricingDetailModal() {
 
         {/* CTA */}
         <div className="bg-gray-50 rounded-lg p-6 text-center">
-          <Button
-            text="Get Started"
-            className="w-full py-3 text-base font-bold rounded-lg bg-brand text-white transition-all hover:shadow-lg hover:scale-105 mb-3"
-          />
+          <Button className="w-full py-3 text-base font-bold rounded-lg bg-brand text-white transition-all hover:shadow-lg hover:scale-105 mb-3">
+            Get Started
+          </Button>
           <p className="text-sm text-gray-500 font-medium">
             ✨ 30-day free trial • No credit card required
           </p>

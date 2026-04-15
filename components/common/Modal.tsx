@@ -103,17 +103,25 @@ export function Modal({ children, onClose }: ModalProps) {
     router.back();
   };
 
+  const handleOutsideClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      handleClose();
+    }
+  };
+
   return (
     <>
       {/* Backdrop */}
       <div
         className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
-        onClick={handleClose}
-        aria-label="Close modal"
+        aria-hidden="true"
       />
 
       {/* Modal Content */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        onClick={handleOutsideClick}
+      >
         <div
           role="dialog"
           className="modal-content bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] relative overflow-hidden"

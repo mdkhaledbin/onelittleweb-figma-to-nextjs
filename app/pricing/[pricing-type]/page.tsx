@@ -46,10 +46,9 @@ export default function PricingDetailPage() {
             <p className="text-lg text-[#595d66] mb-8">
               Sorry, the pricing plan you're looking for doesn't exist.
             </p>
-            <Button
-              text="Back to Pricing"
-              onClick={() => router.push("/#pricing")}
-            />
+            <Button onClick={() => router.push("/#pricing")}>
+              Back to Pricing
+            </Button>
           </div>
         </Wrapper>
       </section>
@@ -90,9 +89,7 @@ export default function PricingDetailPage() {
                   <span className="text-6xl font-bold text-brand">
                     ${planData.price}
                   </span>
-                  <span className="text-xl text-[#595d66]">
-                    / month
-                  </span>
+                  <span className="text-xl text-[#595d66]">/ month</span>
                 </div>
 
                 {/* Billing Period Savings */}
@@ -134,11 +131,9 @@ export default function PricingDetailPage() {
               </div>
 
               {/* CTA Button */}
-              <Button
-                text="Get Started"
-                className="w-full mb-4 py-3"
-                onClick={() => {}}
-              />
+              <Button className="w-full mb-4 py-3" onClick={() => {}}>
+                Get Started
+              </Button>
 
               <p className="text-sm text-center text-[#595d66]">
                 30-day free trial • No credit card required
@@ -200,10 +195,9 @@ export default function PricingDetailPage() {
                 plan is not available at this moment. We're working on bringing
                 this plan to you soon.
               </p>
-              <Button
-                text="Explore Other Plans"
-                onClick={() => router.push("/#pricing")}
-              />
+              <Button onClick={() => router.push("/#pricing")}>
+                Explore Other Plans
+              </Button>
             </div>
           </div>
         </div>
@@ -217,10 +211,9 @@ export default function PricingDetailPage() {
             Check out all available pricing options to find the perfect plan for
             your property management needs.
           </p>
-          <Button
-            text="View All Plans"
-            onClick={() => router.push("/#pricing")}
-          />
+          <Button onClick={() => router.push("/#pricing")}>
+            View All Plans
+          </Button>
         </div>
 
         {/* FAQ Section */}
