@@ -1,160 +1,138 @@
-# OneLittleWeb Landing Page Assessment (Next.js)
+# OneLittleWeb Mid-Level Web Developer Hiring Assessment
 
-## Live Demo
+Production-quality, pixel-perfect Next.js landing page implementation based on the provided Figma design, with strong focus on layout accuracy, responsive behavior, reusable architecture, and clean engineering standards.
 
-- Production URL: `https://onelittleweb-figma-to-nextjs.netlify.app`
+## Hiring Assessment Context
 
-## GitHub Repository
+This repository is a practical submission for the Mid-Level Web Developer hiring assessment at OneLittleWeb.
 
-- Repository URL: `https://github.com/mdkhaledbin/onelittleweb-figma-to-nextjs.git`
+Primary objective:
 
-## Overview
+- Convert the provided Figma design into a fully functional landing page
+- Build with Next.js
+- Maintain high fidelity in spacing, typography, alignment, visual hierarchy, and responsive behavior
 
-This project is a practical interview task for OneLittleWeb (Mid-Level Web Developer role).
+## Quick Requirement Verification
 
-The objective was to convert a provided Figma landing page design into a fully working Next.js application with high UI fidelity. The implementation focuses on:
+- [✅] Implemented as a working Next.js project
+- [✅] Design translated into a pixel-accurate landing page
+- [✅] Responsive behavior implemented across desktop, tablet, and mobile
+- [✅] Reusable React component architecture applied
+- [✅] Codebase structured for maintainability and future extension
 
-- Accurate layout and spacing
-- Responsive behavior across screen sizes
-- Consistent styling and section composition
-- Clean, modular, and scalable code organization
+## Links
 
-Design reference:
+- Live URL: https://onelittleweb-figma-to-nextjs.netlify.app/
 
-- Figma: https://www.figma.com/design/UM1FKXjlkAmDh4q11Yu6AM/OLW-Web-Dev-Hiring-Task?m=auto&t=JBsgbtxmxZIGs3EC-1
 
 ## Features
 
-- Built with Next.js App Router
-- Uses Parallel Routes to render major landing page sections in independent slots
-- Section-based loading UIs (`loading.tsx`) prepared for async data integration
-- Component-driven architecture with reusable UI building blocks
-- Responsive design implementation aligned with the provided Figma
-- Animated interactions and transitions for improved UX (Framer Motion)
+- Pixel-accurate UI implementation based on Figma reference
+- Responsive layout tuned for common breakpoints
+- Reusable, section-driven component architecture
+- Clean separation of routing, presentation, and shared data
+- App Router-based route composition (including dynamic route patterns)
+- Smooth interaction and motion support where appropriate
 
 ## Tech Stack
 
-- Framework: Next.js 16 (App Router)
-- UI: React 19
+- Framework: Next.js (App Router)
+- Library: React
 - Language: TypeScript
-- Styling: Tailwind CSS 4
+- Styling: Tailwind CSS
 - Animation: Framer Motion
-- Linting: ESLint (Next.js config)
-- Deployment: Vercel (or equivalent hosting)
+- Linting: ESLint
+- Deployment: Netlify
 
-## Architecture & Design Decisions
+## Project Structure
 
-### Why Next.js
-
-Next.js was selected because it provides:
-
-- A production-ready React framework with routing, performance optimizations, and deployment-friendly defaults
-- App Router patterns that encourage clear route and UI composition
-- Strong support for scalable front-end architecture as features grow
-- Built-in capabilities such as optimized images, font loading, and structured layouts
-
-### Parallel Routing (Core Architectural Decision)
-
-The landing page is organized using App Router parallel slots under `app/`:
-
-- `@hero`
-- `@services`
-- `@pricing`
-- `@tools`
-- `@about`
-- `@review`
-
-These slots are composed in `app/layout.tsx`, allowing each section to be developed and rendered independently.
-
-Why this matters:
-
-- Performance: independent sections can resolve/render without blocking the entire page tree
-- Scalability: each slot behaves like a self-contained route segment, making it easier to evolve into standalone pages later
-- Team velocity: isolated section ownership reduces coupling and merge friction
-- Maintainability: clear boundaries between concerns improve long-term readability
-
-### Loading UI Strategy
-
-Each major section follows a localized loading UI pattern via `loading.tsx` files (for example in `@hero`, `@services`, `@pricing`, `@tools`, and `@about`).
-
-Benefits:
-
-- Better perceived performance via skeleton states instead of blank areas
-- Progressive rendering at section level
-- Future-ready for asynchronous data fetching per section
-- Improved UX consistency as the app grows
-
-### Modularity and Separation of Concerns
-
-The codebase is intentionally split into reusable, focused modules:
-
-- `components/` for UI building blocks and section components
-- `lib/` for constants and shared data structures
-- `app/` for route-level composition and slot orchestration
-
-This enables reuse, easier testing, and predictable extension as requirements evolve.
-
-## Folder Structure
+Typical structure used in this repository:
 
 ```text
 .
 |-- app/
 |   |-- layout.tsx
 |   |-- page.tsx
-|   |-- @hero/
-|   |   |-- page.tsx
-|   |   `-- loading.tsx
-|   |-- @services/
-|   |   |-- page.tsx
-|   |   `-- loading.tsx
-|   |-- @pricing/
-|   |   |-- page.tsx
-|   |   `-- loading.tsx
-|   |-- @tools/
-|   |   |-- page.tsx
-|   |   `-- loading.tsx
-|   |-- @about/
-|   |   |-- page.tsx
-|   |   `-- loading.tsx
-|   `-- @review/
-|       `-- page.tsx
+|   |-- globals.css
+|   |-- services/
+|   |   `-- [slug]/page.tsx
+|   `-- pricing/
+|       `-- [pricing-type]/page.tsx
+|----- @modal
+|       |-- (.)services/
+|       |    `-- [slug]/page.tsx
+|       `-- (.)pricing/
+|            `-- [pricing-type]/page.tsx
 |-- components/
+|   |-- sections/
 |   |-- common/
 |   |-- hero/
 |   |-- services/
 |   |-- pricing/
 |   |-- about/
-|   |-- review/
-|   |-- navbar/
-|   `-- footer/
+|   `-- review/
 |-- lib/
 |   `-- constants.tsx
 |-- public/
-`-- README.md
+|-- next.config.ts
+|-- tailwind.config.ts
+|-- tsconfig.json
+`-- package.json
 ```
 
-## Getting Started
+## Approach and Implementation
+
+### Componentization Strategy
+
+- Built the page as composable section components to keep each part focused and testable
+- Extracted shared UI elements (buttons, wrappers, modal primitives, icons) into reusable units
+- Kept data flow predictable by centralizing shared display content and metadata in a constants module
+
+### Responsiveness Handling
+
+- Implemented a mobile-first layout strategy with controlled breakpoint scaling
+- Maintained consistent spacing rhythm and container constraints across viewport sizes
+- Validated visual balance and readability for desktop, tablet, and mobile variants
+
+### Design Fidelity Approach
+
+- Matched typography scale, spacing, alignment, and component proportions against Figma
+- Preserved section hierarchy and interaction expectations from the source design
+- Reduced design drift by using consistent utility patterns and shared design tokens
+
+## Data Handling
+
+Current implementation uses static constants from a shared module for predictable rendering and clean component reuse.
+
+Data is currently stored as static constants for performance and simplicity. This can be easily migrated to an API layer (e.g., Next.js API routes or external backend) if dynamic content is required.
+
+## Performance Considerations
+
+- Lean component composition to avoid unnecessary render complexity
+- Static data usage for fast initial rendering and low runtime overhead
+- Optimized asset usage through Next.js conventions and public asset organization
+- Route and section structure designed for future incremental optimization
+
+## Run Locally
 
 ### Prerequisites
 
 - Node.js 20+
-- npm (or yarn/pnpm/bun)
+- npm
 
 ### Installation
 
 ```bash
-git clone <repository-url>
-cd onelittlelab_assessment
 npm install
 ```
 
-### Run Locally
+### Development
 
 ```bash
 npm run dev
 ```
 
-Open `http://localhost:3000` in your browser.
+Open http://localhost:3000
 
 ### Production Build
 
@@ -163,33 +141,27 @@ npm run build
 npm run start
 ```
 
+### Linting
+
+```bash
+npm run lint
+```
+
 ## Deployment
 
-This project is deployed and can be hosted on platforms such as Vercel.
+Deployed at: Netlify
 
-- Vercel Project URL: `<add-vercel-url>`
-- Alternative hosting: Netlify, Render, or any Node.js-compatible platform
+Recommended flow:
 
-## Screenshots
+1. Pushed repository to GitHub
+2. Imported repository into Netlify
+3. Configured project (framework auto-detected as Next.js)
+4. Deployed and verified responsive behavior on the live URL
 
-- Desktop view: <img src="public/screenShot/desktop.png" alt="Desktop View" width="1200"/>
-- Tablet view: <img src="public/screenShot/tab.png" alt="Tablet View" width="768" />
-- Mobile view: <img src="public/screenShot/mobile.jpeg" alt="Mobile View" width="390" />
+## Time Taken
 
-## Future Improvements
+- Total implementation time: 8± hours
 
-- Replace placeholder/static copy with CMS or API-driven content
-- Add automated tests (unit + integration + visual regression)
-- Add analytics and performance monitoring (Core Web Vitals)
-- Improve accessibility audit coverage (ARIA, keyboard navigation, contrast)
-- Extend slot segments into dedicated pages (for example, detailed services/pricing pages)
+## Evaluation Note
 
-## OneLittleWeb Hiring Process Note
-
-This repository was developed as part of the OneLittleWeb hiring process for the Mid-Level Web Developer role. The task emphasized practical Next.js execution, UI precision, responsiveness, and clean engineering structure.
-
-## License
-
-This project is licensed under the MIT License.
-
-See the [LICENSE](LICENSE) file for details.
+This submission is intentionally structured for rapid recruiter and engineering review. It demonstrates attention to detail in UI execution, thoughtful component architecture, responsive implementation quality, and production-oriented frontend practices expected from a mid-level developer.
