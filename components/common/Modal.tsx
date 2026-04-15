@@ -39,13 +39,23 @@ export function Modal({ children, onClose }: ModalProps) {
     // Prevent all scroll events
     const preventScroll = (e: Event) => {
       if (preventScrollRef.current) {
-        e.preventDefault();
+        const target = e.target as HTMLElement;
+        // Allow scrolling within modal, only prevent body scroll
+        if (!target.closest('[role="dialog"], .modal-content')) {
+          e.preventDefault();
+        }
       }
     };
 
     // Prevent arrow keys, page up/down, home/end
     const preventScrollKeys = (e: KeyboardEvent) => {
       if (!preventScrollRef.current) return;
+
+      const target = e.target as HTMLElement;
+      // Allow scrolling within modal with keyboard
+      if (target.closest('[role="dialog"], .modal-content')) {
+        return;
+      }
 
       const scrollKeys = [32, 33, 34, 35, 36, 40]; // Space, PgUp, PgDn, End, Home, Down
       if (scrollKeys.includes(e.keyCode)) {
@@ -103,9 +113,10 @@ export function Modal({ children, onClose }: ModalProps) {
       />
 
       {/* Modal Content */}
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
         <div
-          className="bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto relative"
+          role="dialog"
+          className="modal-content bg-white rounded-lg shadow-2xl max-w-3xl w-full max-h-[90vh] relative overflow-hidden"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close Button */}

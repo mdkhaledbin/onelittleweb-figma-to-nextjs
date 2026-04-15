@@ -3,7 +3,7 @@
 import React from "react";
 import { SERVICES } from "@/lib/constants";
 import { Reveal } from "@/components/services/Reveal";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { notFound } from "next/navigation";
 import { Modal } from "@/components/common/Modal";
 
@@ -24,6 +24,7 @@ export default function ServiceDetailModal({
 }) {
   // Unwrap the params Promise with React.use()
   const { slug } = React.use(params);
+  const router = useRouter();
 
   // Find the service matching the slug
   const service = SERVICES.find((s) => createSlug(s.title) === slug);
@@ -31,6 +32,18 @@ export default function ServiceDetailModal({
   if (!service) {
     notFound();
   }
+
+  const navigateAfterClose = (href: string) => {
+    const onPop = () => {
+      window.removeEventListener("popstate", onPop);
+      router.push(href);
+    };
+    window.addEventListener("popstate", onPop);
+    router.back();
+  };
+
+  const handleScheduleMeeting = () => navigateAfterClose("/meeting");
+  const handleExploreServices = () => navigateAfterClose("/#services");
 
   return (
     <Modal>
@@ -165,18 +178,18 @@ export default function ServiceDetailModal({
             {service.title.toLowerCase()}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/meeting"
+            <button
+              onClick={handleScheduleMeeting}
               className="inline-flex items-center justify-center rounded-full bg-brand px-6 py-2 text-xs font-bold text-white transition-all hover:shadow-lg hover:scale-105"
             >
               Schedule a Meeting
-            </Link>
-            <Link
-              href="/#services"
+            </button>
+            <button
+              onClick={handleExploreServices}
               className="inline-flex items-center justify-center rounded-full border-2 border-brand px-6 py-2 text-xs font-bold text-brand transition-colors hover:bg-brand hover:text-white"
             >
               Explore Other Services
-            </Link>
+            </button>
           </div>
         </div>
       </Reveal>

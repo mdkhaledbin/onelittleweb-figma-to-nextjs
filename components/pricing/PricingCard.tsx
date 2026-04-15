@@ -37,13 +37,13 @@ export default function PricingCard({
         <span className="font-semibold text-5xl leading-none">
           ${isYearly ? plan.yearlyPrice : plan.monthlyPrice}
         </span>
-        <span className="mb-2 text-sm">/ {isYearly ? "Year" : "Month"}</span>
+        <span className="mb-2 text-sm">/ month</span>
       </div>
 
       <Button
         variant={plan.highlighted ? "secondary" : "outline"}
         className={`${plan.highlighted ? "mt-5 text-brand bg-white" : "mt-5"} w-full`}
-        navigateTo="/meeting"
+        navigateTo={`/pricing/${plan.name.toLowerCase()}?returnTo=%23pricing`}
       >
         Get Started Now
       </Button>
