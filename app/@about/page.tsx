@@ -6,7 +6,7 @@ import { Reveal } from "@/components/services/Reveal";
 import { Stagger, StaggerItem } from "@/components/services/Stagger";
 import Reasons from "@/components/about/Reasons";
 
-export default function GettingStarted() {
+export default function About() {
   return (
     <section id="about">
       <div className="self-stretch flex justify-center px-5 pb-24 text-center text-black font-['DM_Sans']">

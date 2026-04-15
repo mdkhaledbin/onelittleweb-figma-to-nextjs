@@ -28,7 +28,7 @@ export default function LeftBar() {
         </div>
 
         <div className="w-full mt-2 md:mt-5">
-          <Button size="lg" className="gap-2 w-full sm:w-fit">
+          <Button size="lg" className="gap-2 w-full sm:w-fit" navigateTo="/meeting">
             Schedule A Meeting
             <ArrowRightIcon className="text-white" />
           </Button>
