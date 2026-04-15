@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Manrope, Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/navbar/Navbar";
 
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
@@ -40,6 +41,7 @@ export default function RootLayout({
       className={`${dmSans.variable} ${manrope.variable} ${plusJakartaSans.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Navbar />
         {children}
         {modal}
         <Footer />

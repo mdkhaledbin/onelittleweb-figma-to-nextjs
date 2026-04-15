@@ -47,7 +47,7 @@ export default function ServiceDetailModal({
 
   return (
     <Modal>
-      <Reveal>
+      <Reveal className="max-h-[95vh] overflow-y-auto pb-20 sm:py-5">
         {/* Service Header */}
         <div className="mb-8">
           <div className="flex items-start gap-4 mb-4">
