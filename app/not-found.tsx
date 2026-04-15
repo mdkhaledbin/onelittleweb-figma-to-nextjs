@@ -1,4 +1,3 @@
-import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -29,7 +28,7 @@ export default function NotFound() {
               Back to Home
             </a>
             <a
-              href="/"
+              href="/#pricing"
               className="inline-flex h-11 items-center justify-center rounded-lg border border-brand px-6 text-sm font-bold text-brand transition-all duration-300 hover:scale-[1.02] hover:bg-[#fff4f7]"
             >
               View Pricing

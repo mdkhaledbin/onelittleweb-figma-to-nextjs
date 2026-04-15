@@ -73,7 +73,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:block">
-            <Button size="lg" className="gap-2">
+            <Button size="lg" className="gap-2" navigateTo="/meeting">
               Schedule A Meeting
               <ArrowRightIcon className="text-white" />
             </Button>
@@ -124,6 +124,7 @@ const Navbar = () => {
             <Button
               size="lg"
               className="w-full gap-2 text-lg justify-center h-14"
+              navigateTo="/meeting"
               onClick={() => setIsOpen(false)}
             >
               Schedule A Meeting

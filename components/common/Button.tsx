@@ -1,14 +1,31 @@
+"use client";
+
 import { ButtonHTMLAttributes, forwardRef } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
+import React from "react";
+import { useRouter } from "next/navigation";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "ghost" | "outline";
   size?: "sm" | "md" | "lg";
+  navigateTo?: string;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "primary", size = "md", ...props }, ref) => {
+  (
+    {
+      className,
+      variant = "primary",
+      size = "md",
+      navigateTo,
+      onClick,
+      ...props
+    },
+    ref,
+  ) => {
+    const router = useRouter();
+
     const baseStyles =
       "inline-flex cursor-pointer items-center justify-center rounded-[5px] font-bold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ed3c6a] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
 
@@ -27,12 +44,20 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       lg: "h-[50px] px-6 text-sm",
     };
 
+    const handleClick: React.MouseEventHandler<HTMLButtonElement> = (event) => {
+      onClick?.(event);
+      if (!event.defaultPrevented && navigateTo) {
+        router.push(navigateTo);
+      }
+    };
+
     return (
       <button
         ref={ref}
         className={twMerge(
           clsx(baseStyles, variants[variant], sizes[size], className),
         )}
+        onClick={handleClick}
         {...props}
       />
     );
