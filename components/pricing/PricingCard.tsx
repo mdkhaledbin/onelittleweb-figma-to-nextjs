@@ -43,6 +43,7 @@ export default function PricingCard({
       <Button
         variant={plan.highlighted ? "secondary" : "outline"}
         className={`${plan.highlighted ? "mt-5 text-brand bg-white" : "mt-5"} w-full`}
+        navigateTo="/meeting"
       >
         Get Started Now
       </Button>

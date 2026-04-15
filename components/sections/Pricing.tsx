@@ -11,7 +11,7 @@ export default function Pricing() {
             Airnbn Assistent <span className="text-brand">pricing</span>
           </h2>
           <p className="mt-3 text-center font-normal text-[#191d23] text-base leading-normal">
-            Choose a plan that’s right for you
+            Choose a plan that's right for you
           </p>
         </Reveal>
 

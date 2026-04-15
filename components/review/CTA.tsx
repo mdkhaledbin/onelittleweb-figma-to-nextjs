@@ -32,7 +32,7 @@ export default function Cta() {
             <p className="mt-2 max-w-155 text-sm leading-6 text-[#191d23]">
               {CTA.description}
             </p>
-            <Button className="mt-5" size="md">
+            <Button className="mt-5" size="md" navigateTo="/meeting">
               {CTA.button}
             </Button>
           </div>

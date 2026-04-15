@@ -38,7 +38,7 @@ export default function Review() {
                   <p className="mt-2 font-medium text-[#1e1e1e] text-xs leading-[1.28] max-w-4/5">
                     {item.text}
                   </p>
-                  <div className="mt-2 flex gap-1 text-[#ed3c6a]">
+                  <div className="mt-2 flex gap-1 text-brand">
                     <StarIcon />
                     <StarIcon />
                     <StarIcon />

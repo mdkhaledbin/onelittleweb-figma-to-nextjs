@@ -106,7 +106,11 @@ export default function Hero() {
             </p>
 
             <div className="mt-12 flex flex-col items-center justify-center gap-2.5 sm:mt-10 lg:mt-8">
-              <Button className="w-full gap-2 sm:w-auto" size="md">
+              <Button
+                className="w-full gap-2 sm:w-auto"
+                size="md"
+                navigateTo="/meeting"
+              >
                 {HERO.primaryCta}
                 <ArrowRightIcon className="text-white" />
               </Button>

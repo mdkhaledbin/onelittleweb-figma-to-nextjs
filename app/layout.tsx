@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Manrope, Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
@@ -30,20 +29,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  hero,
-  services,
-  pricing,
-  tools,
-  about,
-  review,
 }: Readonly<{
   children: React.ReactNode;
-  hero: React.ReactNode;
-  services: React.ReactNode;
-  pricing: React.ReactNode;
-  tools: React.ReactNode;
-  about: React.ReactNode;
-  review: React.ReactNode;
 }>) {
   return (
     <html
@@ -51,13 +38,6 @@ export default function RootLayout({
       className={`${dmSans.variable} ${manrope.variable} ${plusJakartaSans.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Navbar />
-        {hero}
-        {services}
-        {pricing}
-        {tools}
-        {about}
-        {review}
         {children}
         <Footer />
       </body>
