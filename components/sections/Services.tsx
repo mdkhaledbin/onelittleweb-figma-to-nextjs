@@ -4,6 +4,16 @@ import { Stagger, StaggerItem } from "@/components/services/Stagger";
 import Wrapper from "@/components/common/Wrapper";
 import Link from "next/link";
 
+function createSlug(title: string) {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, "and")        // replace &
+    .replace(/[^a-z0-9\s-]/g, "") // remove special chars
+    .replace(/\s+/g, "-")         // spaces → -
+    .replace(/-+/g, "-");         // remove duplicate -
+}
+
 export default function Services() {
   return (
     <section
@@ -39,7 +49,7 @@ export default function Services() {
                 </p>
                 <div className="mt-auto pt-8">
                   <Link
-                    href="#"
+                    href={`/services/${createSlug(service.title)}`}
                     className="inline-flex min-w-30 items-center justify-center rounded-full border border-brand px-6 py-2 text-xs font-bold text-brand transition-colors hover:bg-brand hover:text-white"
                   >
                     Read More
