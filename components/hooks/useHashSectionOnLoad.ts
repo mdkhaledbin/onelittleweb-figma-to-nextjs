@@ -2,6 +2,44 @@ import { useEffect } from "react";
 
 const LAST_ACTIVE_HREF_KEY = "last-active-href";
 
+const decodeHashValue = (value: string): string => {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+};
+
+const normalizeCurrentHash = () => {
+  const { hash, pathname: currentPathname, search } = window.location;
+
+  if (!hash) {
+    return;
+  }
+
+  const decodedHash = decodeHashValue(hash.slice(1));
+  const hashParts = decodedHash
+    .split("#")
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  if (hashParts.length === 0) {
+    window.history.replaceState(null, "", `${currentPathname}${search}`);
+    return;
+  }
+
+  const lastHash = hashParts[hashParts.length - 1];
+  const normalizedHash = `#${encodeURIComponent(lastHash)}`;
+
+  if (hash !== normalizedHash) {
+    window.history.replaceState(
+      null,
+      "",
+      `${currentPathname}${search}${normalizedHash}`,
+    );
+  }
+};
+
 interface UseHashSectionOnLoadProps {
   pathname: string;
   isHomeRoute: boolean;
@@ -14,30 +52,20 @@ export const useHashSectionOnLoad = ({
   activeHref,
 }: UseHashSectionOnLoadProps) => {
   useEffect(() => {
-    const { hash, pathname: currentPathname, search } = window.location;
+    normalizeCurrentHash();
 
-    if (!hash) {
-      return;
-    }
+    window.addEventListener("hashchange", normalizeCurrentHash);
 
-    const hashParts = hash
-      .split("#")
-      .map((part) => part.trim())
-      .filter(Boolean);
+    return () => {
+      window.removeEventListener("hashchange", normalizeCurrentHash);
+    };
+  }, []);
 
-    if (hashParts.length === 0) {
-      window.history.replaceState(null, "", `${currentPathname}${search}`);
-      return;
-    }
+  useEffect(() => {
+    normalizeCurrentHash();
+  }, [activeHref, pathname]);
 
-    if (hashParts.length > 1) {
-      const lastHash = hashParts[hashParts.length - 1];
-      window.history.replaceState(
-        null,
-        "",
-        `${currentPathname}${search}#${lastHash}`,
-      );
-    }
+  useEffect(() => {
     if (!isHomeRoute) {
       return;
     }

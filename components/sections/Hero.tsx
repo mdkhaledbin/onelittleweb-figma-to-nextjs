@@ -115,7 +115,7 @@ export default function Hero() {
                 <ArrowRightIcon className="text-white" />
               </Button>
               <Link
-                href="#pricing"
+                href="/#pricing"
                 className="mt-5 text-sm block font-semibold text-[#1e1e1e] underline hover:text-brand lg:mt-3"
               >
                 {HERO.secondaryCta}

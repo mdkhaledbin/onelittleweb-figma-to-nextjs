@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, type MouseEvent } from "react";
 import logo from "@/public/navbar/logo.png";
 import Button from "@/components/common/Button";
 import Wrapper from "@/components/common/Wrapper";
@@ -19,6 +19,58 @@ const Navbar = () => {
   const activeHref = useActiveHref();
   const pathname = usePathname();
   const isHomeRoute = pathname === "/";
+
+  const getSectionHref = (href: string) =>
+    href.startsWith("#") ? `/${href}` : href;
+
+  const decodeSectionId = (value: string): string => {
+    try {
+      return decodeURIComponent(value);
+    } catch {
+      return value;
+    }
+  };
+
+  const handleSectionClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    href: string,
+    closeMenu = false,
+  ) => {
+    if (!href.startsWith("#")) {
+      if (closeMenu) {
+        setIsOpen(false);
+      }
+      return;
+    }
+
+    event.preventDefault();
+
+    const targetHash = `#${encodeURIComponent(
+      decodeSectionId(href.slice(1)).trim(),
+    )}`;
+
+    if (targetHash === "#") {
+      return;
+    }
+
+    const { pathname: currentPathname, search } = window.location;
+    window.history.replaceState(
+      null,
+      "",
+      `${currentPathname}${search}${targetHash}`,
+    );
+
+    const targetId = decodeSectionId(targetHash.slice(1));
+    const target = document.getElementById(targetId);
+
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    if (closeMenu) {
+      setIsOpen(false);
+    }
+  };
 
   useHashSectionOnLoad({ pathname, isHomeRoute, activeHref });
 
@@ -67,7 +119,8 @@ const Navbar = () => {
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.label}
-                    href={link.href}
+                    href={getSectionHref(link.href)}
+                    onClick={(event) => handleSectionClick(event, link.href)}
                     className={clsx(
                       "relative text-lg leading-normal transition-all duration-300 group hover:-translate-y-0.5",
                       activeHref === link.href
@@ -125,8 +178,10 @@ const Navbar = () => {
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.label}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  href={getSectionHref(link.href)}
+                  onClick={(event) =>
+                    handleSectionClick(event, link.href, true)
+                  }
                   className={clsx(
                     "text-2xl transition-all duration-300",
                     activeHref === link.href
